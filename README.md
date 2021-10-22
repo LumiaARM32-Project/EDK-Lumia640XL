@@ -1,5 +1,5 @@
-# MSM8926
-用于MSM8926的WIP定制ARM UEFI固件，基于rickliu的Lumia830Pkg：https://github.com/rickliu2000/Lumia930Pkg
+# Lumia640XL
+用于Lumia640XL的WIP定制ARM UEFI固件，基于rickliu的Lumia830Pkg：https://github.com/rickliu2000/Lumia930Pkg
 
 # Thanks to : <br/>
  - Rick Liu for creating Lumia930Pkg<br/>
