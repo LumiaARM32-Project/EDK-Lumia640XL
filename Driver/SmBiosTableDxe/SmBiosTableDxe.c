@@ -143,7 +143,7 @@ SMBIOS_TABLE_TYPE1 mSysInfoType1 = {
 };
 CHAR8  *mSysInfoType1Strings[] = {
   "Nokia",
-  "Lumia 830",
+  "Lumia 640XL",
   "RM-984",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "RM-984",
@@ -207,7 +207,7 @@ SMBIOS_TABLE_TYPE3  mEnclosureInfoType3 = {
   { { 0 } },    // ContainedElements[1];
 };
 CHAR8  *mEnclosureInfoType3Strings[] = {
-  "Lumia 830",
+  "Lumia 640XL",
   "1",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "",
@@ -299,7 +299,7 @@ SMBIOS_TABLE_TYPE4 mProcessorInfoType4 = {
 CHAR8 *mProcessorInfoType4Strings[] = {
   "Socket",
   "Qualcomm Inc.",
-  "Qualcomm Snapdragon 800 Processor (8926)",
+  "Qualcomm Snapdragon 400 Processor (8926)",
   "MSM8926",
   NULL
 };

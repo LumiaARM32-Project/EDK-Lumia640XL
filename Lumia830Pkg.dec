@@ -111,6 +111,9 @@
   # Misc
   gQcomTokenSpaceGuid.PcdGicSpiStart|0|UINT64|0x00000200
 
+  # Debug Screen Serial
+  gLumia830PkgTokenSpaceGuid.PcdEnableScreenSerial|FALSE|BOOLEAN|0x00000a105
+
 [PcdsFeatureFlag.common]
   # MMCHSDxe
   gQcomTokenSpaceGuid.PcdMmcAdmSupport|FALSE|BOOLEAN|0x00010001

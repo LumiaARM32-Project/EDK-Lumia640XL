@@ -368,8 +368,6 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   Lumia830Pkg/Driver/ClockDxe/ClockDxe.inf
   Lumia830Pkg/Driver/SdhciMMCHSDxe/SdhciMMCHS.inf
 
-
-
   # Runtime Services
   MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
   MdeModulePkg/Universal/CapsuleRuntimeDxe/CapsuleRuntimeDxe.inf
@@ -380,6 +378,9 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
 
   # Security Stub
   MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe.inf
+
+  # Virtual Keyboard
+  EmbeddedPkg/Drivers/VirtualKeyboardDxe/VirtualKeyboardDxe.inf
 
   # Graphics Driver
   Lumia830Pkg/Driver/SimpleFbDxe/SimpleFbDxe.inf

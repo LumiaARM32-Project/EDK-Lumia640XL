@@ -71,6 +71,9 @@ READ_LOCK_STATUS   = TRUE
   #INF MdeModulePkg/Universal/Variable/EmuRuntimeDxe/EmuVariableRuntimeDxe.inf
   INF MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
 
+  # Virtual Keyboard
+  INF EmbeddedPkg/Drivers/VirtualKeyboardDxe/VirtualKeyboardDxe.inf
+
   # Security Stub
   INF MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe.inf
 
