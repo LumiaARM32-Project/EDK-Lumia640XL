@@ -426,6 +426,14 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   
   # ACPI AND SMBIOS
   Lumia830Pkg/Driver/SmBiosTableDxe/SmBiosTableDxe.inf
+
+  #
+  # ACPI Support
+  #
+  MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
+  MdeModulePkg/Universal/Acpi/AcpiPlatformDxe/AcpiPlatformDxe.inf
+  MdeModulePkg/Universal/Acpi/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf
+
   # Shell
   ShellPkg/Application/Shell/Shell.inf {
     <LibraryClasses>
