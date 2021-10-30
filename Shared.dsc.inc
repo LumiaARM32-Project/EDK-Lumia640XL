@@ -143,6 +143,14 @@
   #gEfiIntelFrameworkModulePkgTokenSpaceGuid.PcdShellFile|{ 0x83, 0xA5, 0x04, 0x7C, 0x3E, 0x9E, 0x1C, 0x4F, 0xAD, 0x65, 0xE0, 0x52, 0x68, 0xD0, 0xB4, 0xD1 }
   gEfiMdePkgTokenSpaceGuid.PcdPlatformBootTimeOut|5
 
+  # RPM
+  gQcomTokenSpaceGuid.PcdApcsAlias0IpcInterrupt|0xF9011000        #Value from LK
+  gQcomTokenSpaceGuid.PcdSmdIrq|200
+
+  # SMEM
+  gQcomTokenSpaceGuid.PcdMsmSharedBase|0x0FA00000                #Value from LK
+  gQcomTokenSpaceGuid.PcdMsmSharedSize|0x00100000                 #Value from LK
+
 
 [LibraryClasses]
 VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePolicyHelperLib.inf
@@ -243,6 +251,7 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   LcmLib|Lumia830Pkg/Library/LcmLib/LcmLib.inf
   MicroLibC|Lumia830Pkg/Library/MicroLibC/MicroLibC.inf
   StrLib|Lumia830Pkg/Library/StrLib/StrLib.inf
+  SmemLib|Lumia830Pkg/Driver/SmemDxe/SmemImplLib.inf
   
   # System Reset
   EfiResetSystemLib|ArmPkg/Library/ArmPsciResetSystemLib/ArmPsciResetSystemLib.inf
@@ -253,7 +262,9 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   PrePiMemoryAllocationLib|EmbeddedPkg/Library/PrePiMemoryAllocationLib/PrePiMemoryAllocationLib.inf
   PrePiHobListPointerLib|ArmPlatformPkg/Library/PrePiHobListPointerLib/PrePiHobListPointerLib.inf
   PcdLib|MdePkg/Library/BasePcdLibNull/BasePcdLibNull.inf
-  
+  RpmLib|Lumia830Pkg/Driver/SmdRpmDxe/RpmLib.inf
+  SmemLib|Lumia830Pkg/Driver/SmemDxe/SmemImplLib.inf
+
   # SoC Drivers
   GpioTlmmLib|Lumia830Pkg/GPLDriver/GpioTlmmDxe/GpioTlmmImplLib.inf
   SpmiLib|Lumia830Pkg/Driver/SpmiDxe/SpmiImplLib.inf
@@ -284,7 +295,8 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   SpmiLib|Lumia830Pkg/Driver/SpmiDxe/SpmiLib.inf
   Pm8x41Lib|Lumia830Pkg/Driver/Pm8x41Dxe/Pm8x41Lib.inf
   ClockLib|Lumia830Pkg/Driver/ClockDxe/ClockImplLib.inf
-
+  RpmLib|Lumia830Pkg/Driver/SmdRpmDxe/RpmLib.inf
+  SmemLib|Lumia830Pkg/Driver/SmemDxe/SmemImplLib.inf
 
 [LibraryClasses.common.UEFI_APPLICATION]
   UefiDecompressLib|MdePkg/Library/BaseUefiDecompressLib/BaseUefiTianoCustomDecompressLib.inf
@@ -295,12 +307,14 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   FileHandleLib|MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib.inf
   ReportStatusCodeLib|MdeModulePkg/Library/DxeReportStatusCodeLib/DxeReportStatusCodeLib.inf
   ExtractGuidedSectionLib|MdePkg/Library/DxeExtractGuidedSectionLib/DxeExtractGuidedSectionLib.inf
+  RpmLib|Lumia830Pkg/Driver/SmdRpmDxe/RpmLib.inf
 
   # SoC Drivers
   GpioTlmmLib|Lumia830Pkg/GPLDriver/GpioTlmmDxe/GpioTlmmLib.inf
   SpmiLib|Lumia830Pkg/Driver/SpmiDxe/SpmiLib.inf
   Pm8x41Lib|Lumia830Pkg/Driver/Pm8x41Dxe/Pm8x41Lib.inf
   ClockLib|Lumia830Pkg/Driver/ClockDxe/ClockImplLib.inf
+  SmemLib|Lumia830Pkg/Driver/SmemDxe/SmemImplLib.inf
 
 [LibraryClasses.common.UEFI_DRIVER]
   ReportStatusCodeLib|MdeModulePkg/Library/DxeReportStatusCodeLib/DxeReportStatusCodeLib.inf
@@ -310,12 +324,14 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   MemoryAllocationLib|MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib.inf
   UefiScsiLib|MdePkg/Library/UefiScsiLib/UefiScsiLib.inf
   ExtractGuidedSectionLib|MdePkg/Library/DxeExtractGuidedSectionLib/DxeExtractGuidedSectionLib.inf
+  RpmLib|Lumia830Pkg/Driver/SmdRpmDxe/RpmLib.inf
 
   # SoC Drivers
   GpioTlmmLib|Lumia830Pkg/GPLDriver/GpioTlmmDxe/GpioTlmmLib.inf
   SpmiLib|Lumia830Pkg/Driver/SpmiDxe/SpmiLib.inf
   Pm8x41Lib|Lumia830Pkg/Driver/Pm8x41Dxe/Pm8x41Lib.inf
   ClockLib|Lumia830Pkg/Driver/ClockDxe/ClockImplLib.inf
+  SmemLib|Lumia830Pkg/Driver/SmemDxe/SmemImplLib.inf
 
 [LibraryClasses.common.DXE_RUNTIME_DRIVER]
   HobLib|MdePkg/Library/DxeHobLib/DxeHobLib.inf
@@ -367,6 +383,8 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   Lumia830Pkg/Driver/KeypadDxe/KeypadDxe.inf
   Lumia830Pkg/Driver/ClockDxe/ClockDxe.inf
   Lumia830Pkg/Driver/SdhciMMCHSDxe/SdhciMMCHS.inf
+  Lumia830Pkg/Driver/SmemDxe/SmemDxe.inf
+  Lumia830Pkg/Driver/SmdRpmDxe/RpmDxe.inf
 
   # Runtime Services
   MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf

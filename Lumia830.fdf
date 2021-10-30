@@ -63,6 +63,8 @@ READ_LOCK_STATUS   = TRUE
   INF Lumia830Pkg/Driver/KeypadDxe/KeypadDxe.inf
   INF Lumia830Pkg/Driver/ClockDxe/ClockDxe.inf
   INF Lumia830Pkg/Driver/SdhciMMCHSDxe/SdhciMMCHS.inf
+  INF Lumia830Pkg/Driver/SmemDxe/SmemDxe.inf
+  INF Lumia830Pkg/Driver/SmdRpmDxe/RpmDxe.inf
 
   # Runtime Services
   INF MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
