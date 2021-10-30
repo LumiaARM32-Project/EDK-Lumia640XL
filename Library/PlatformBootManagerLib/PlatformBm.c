@@ -500,9 +500,9 @@ GetPlatformOptions (
     //
     // Register a hotkey with the boot option, if requested.
     //
-    if (BootKeys[Index].UnicodeChar == L'\0') {
-      continue;
-    }
+     if (BootKeys[Index].UnicodeChar == L'\0') {
+     continue;
+     }
 
     Status = EfiBootManagerAddKeyOptionVariable (
                NULL,
@@ -511,7 +511,7 @@ GetPlatformOptions (
                &BootKeys[Index],
                NULL
                );
-    if (EFI_ERROR (Status)) {
+      if (EFI_ERROR (Status)) {
       DEBUG ((DEBUG_ERROR, "%a: failed to register hotkey for \"%s\": %r\n",
         __FUNCTION__, BootOptions[Index].Description, Status));
     }
@@ -736,7 +736,7 @@ PlatformBootManagerAfterConsole (
   //
   // Enumerate all possible boot options.
   //
-  EfiBootManagerRefreshAllBootOption ();
+   EfiBootManagerRefreshAllBootOption ();
 
   //
   // Register UEFI Shell
