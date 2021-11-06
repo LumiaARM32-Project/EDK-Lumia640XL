@@ -385,6 +385,7 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   Lumia830Pkg/Driver/SdhciMMCHSDxe/SdhciMMCHS.inf
   Lumia830Pkg/Driver/SmemDxe/SmemDxe.inf
   Lumia830Pkg/Driver/SmdRpmDxe/RpmDxe.inf
+  Lumia830Pkg/Driver/SsbiDxe/SsbiDxe.inf
 
   # Runtime Services
   MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
