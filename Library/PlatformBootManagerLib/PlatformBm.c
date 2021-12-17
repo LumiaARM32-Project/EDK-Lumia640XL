@@ -511,7 +511,7 @@ GetPlatformOptions (
                &BootKeys[Index],
                NULL
                );
-      if (EFI_ERROR (Status)) {
+    if (EFI_ERROR (Status)) {
       DEBUG ((DEBUG_ERROR, "%a: failed to register hotkey for \"%s\": %r\n",
         __FUNCTION__, BootOptions[Index].Description, Status));
     }

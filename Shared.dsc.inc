@@ -144,13 +144,12 @@
   gEfiMdePkgTokenSpaceGuid.PcdPlatformBootTimeOut|5
 
   # RPM
-  gQcomTokenSpaceGuid.PcdApcsAlias0IpcInterrupt|0xF9011000        #Value from LK
+  gQcomTokenSpaceGuid.PcdApcsAlias0IpcInterrupt|0xF9011000 #Value from LK
   gQcomTokenSpaceGuid.PcdSmdIrq|200
 
-  # SMEM
-  gQcomTokenSpaceGuid.PcdMsmSharedBase|0x0FA00000                #Value from LK
-  gQcomTokenSpaceGuid.PcdMsmSharedSize|0x00100000                 #Value from LK
-
+   # SMEM
+  gQcomTokenSpaceGuid.PcdMsmSharedBase|0x0FA00000 #Value from LK
+  gQcomTokenSpaceGuid.PcdMsmSharedSize|0x00100000 #Value from LK
 
 [LibraryClasses]
 VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePolicyHelperLib.inf
@@ -264,7 +263,7 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   PcdLib|MdePkg/Library/BasePcdLibNull/BasePcdLibNull.inf
   RpmLib|Lumia830Pkg/Driver/SmdRpmDxe/RpmLib.inf
   SmemLib|Lumia830Pkg/Driver/SmemDxe/SmemImplLib.inf
-
+  
   # SoC Drivers
   GpioTlmmLib|Lumia830Pkg/GPLDriver/GpioTlmmDxe/GpioTlmmImplLib.inf
   SpmiLib|Lumia830Pkg/Driver/SpmiDxe/SpmiImplLib.inf
@@ -297,6 +296,7 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   ClockLib|Lumia830Pkg/Driver/ClockDxe/ClockImplLib.inf
   RpmLib|Lumia830Pkg/Driver/SmdRpmDxe/RpmLib.inf
   SmemLib|Lumia830Pkg/Driver/SmemDxe/SmemImplLib.inf
+
 
 [LibraryClasses.common.UEFI_APPLICATION]
   UefiDecompressLib|MdePkg/Library/BaseUefiDecompressLib/BaseUefiTianoCustomDecompressLib.inf
@@ -385,7 +385,7 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   Lumia830Pkg/Driver/SdhciMMCHSDxe/SdhciMMCHS.inf
   Lumia830Pkg/Driver/SmemDxe/SmemDxe.inf
   Lumia830Pkg/Driver/SmdRpmDxe/RpmDxe.inf
-  Lumia830Pkg/Driver/SsbiDxe/SsbiDxe.inf
+
 
   # Runtime Services
   MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
@@ -397,9 +397,6 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
 
   # Security Stub
   MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe.inf
-
-  # Virtual Keyboard
-  EmbeddedPkg/Drivers/VirtualKeyboardDxe/VirtualKeyboardDxe.inf
 
   # Graphics Driver
   Lumia830Pkg/Driver/SimpleFbDxe/SimpleFbDxe.inf
@@ -443,9 +440,6 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   # NetworkPkg/TcpDxe/TcpDxe.inf
   # NetworkPkg/Udp4Dxe/Udp4Dxe.inf
   
-  # ACPI AND SMBIOS
-  Lumia830Pkg/Driver/SmBiosTableDxe/SmBiosTableDxe.inf
-
   #
   # ACPI Support
   #
@@ -454,6 +448,8 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   MdeModulePkg/Universal/Acpi/AcpiPlatformDxe/AcpiPlatformDxe.inf
   MdeModulePkg/Universal/Acpi/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf
 
+  # ACPI AND SMBIOS
+  Lumia830Pkg/Driver/SmBiosTableDxe/SmBiosTableDxe.inf
   # Shell
   ShellPkg/Application/Shell/Shell.inf {
     <LibraryClasses>

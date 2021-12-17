@@ -143,7 +143,7 @@ SMBIOS_TABLE_TYPE1 mSysInfoType1 = {
 };
 CHAR8  *mSysInfoType1Strings[] = {
   "Nokia",
-  "Lumia 640XL",
+  "Lumia 830",
   "RM-984",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "RM-984",
@@ -207,7 +207,7 @@ SMBIOS_TABLE_TYPE3  mEnclosureInfoType3 = {
   { { 0 } },    // ContainedElements[1];
 };
 CHAR8  *mEnclosureInfoType3Strings[] = {
-  "Lumia 640XL",
+  "Lumia 830",
   "1",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "",
@@ -279,7 +279,7 @@ SMBIOS_TABLE_TYPE4 mProcessorInfoType4 = {
     0   // ProcessorVoltageIndicateLegacy      :1;
   },
   0,                      // ExternalClock;
-  1200,                      // MaxSpeed;
+  2000,                      // MaxSpeed;
   2000,                      // CurrentSpeed;
   0x41,                   // Status;
   ProcessorUpgradeOther,  // ProcessorUpgrade;      ///< The enumeration value from PROCESSOR_UPGRADE.
@@ -289,9 +289,9 @@ SMBIOS_TABLE_TYPE4 mProcessorInfoType4 = {
   0,                      // SerialNumber;
   0,                      // AssetTag;
   4,                      // PartNumber;
-  FixedPcdGet32(PcdCoreCount),                         // CoreCount;
-  FixedPcdGet32(PcdCoreCount),                         // EnabledCoreCount;
-  FixedPcdGet32(PcdCoreCount),                         // ThreadCount;
+  1,                      // CoreCount;
+  1,                      // EnabledCoreCount;
+  0,                      // ThreadCount;
   0x8,                   // ProcessorCharacteristics;
   ProcessorFamilyARM,     // ARM Processor Family;
 };
@@ -299,7 +299,7 @@ SMBIOS_TABLE_TYPE4 mProcessorInfoType4 = {
 CHAR8 *mProcessorInfoType4Strings[] = {
   "Socket",
   "Qualcomm Inc.",
-  "Qualcomm Snapdragon 400 Processor (8926)",
+  "Qualcomm Snapdragon 800 Processor (8926)",
   "MSM8926",
   NULL
 };
