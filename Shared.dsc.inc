@@ -152,9 +152,12 @@
   gQcomTokenSpaceGuid.PcdMsmSharedSize|0x00100000 #Value from LK
 
 [LibraryClasses]
-VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePolicyHelperLib.inf
+  TimeBaseLib|EmbeddedPkg/Library/TimeBaseLib/TimeBaseLib.inf
+  VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePolicyHelperLib.inf
+  OrderedCollectionLib|MdePkg/Library/BaseOrderedCollectionRedBlackTreeLib/BaseOrderedCollectionRedBlackTreeLib.inf
 
 [LibraryClasses.common]
+  VariablePolicyLib|MdeModulePkg/Library/VariablePolicyLib/VariablePolicyLibRuntimeDxe.inf
   ArmLib|ArmPkg/Library/ArmLib/ArmBaseLib.inf
   ArmMmuLib|ArmPkg/Library/ArmMmuLib/ArmMmuBaseLib.inf
   ArmGenericTimerCounterLib|ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.inf
@@ -251,10 +254,10 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   MicroLibC|Lumia830Pkg/Library/MicroLibC/MicroLibC.inf
   StrLib|Lumia830Pkg/Library/StrLib/StrLib.inf
   SmemLib|Lumia830Pkg/Driver/SmemDxe/SmemImplLib.inf
-  
+  PTableLib|Lumia830Pkg/Library/PTableLib/PTableLib.inf
+
   # System Reset
   EfiResetSystemLib|ArmPkg/Library/ArmPsciResetSystemLib/ArmPsciResetSystemLib.inf
-
 [LibraryClasses.common.SEC]
   HobLib|EmbeddedPkg/Library/PrePiHobLib/PrePiHobLib.inf
   MemoryAllocationLib|EmbeddedPkg/Library/PrePiMemoryAllocationLib/PrePiMemoryAllocationLib.inf
@@ -385,7 +388,7 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   Lumia830Pkg/Driver/SdhciMMCHSDxe/SdhciMMCHS.inf
   Lumia830Pkg/Driver/SmemDxe/SmemDxe.inf
   Lumia830Pkg/Driver/SmdRpmDxe/RpmDxe.inf
-
+  Lumia830Pkg/Driver/SmemPtableDxe/SmemPtableDxe.inf
 
   # Runtime Services
   MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
@@ -393,7 +396,13 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   MdeModulePkg/Universal/MonotonicCounterRuntimeDxe/MonotonicCounterRuntimeDxe.inf
   # TODO: Replace with actual Variable Services
   #MdeModulePkg/Universal/Variable/EmuRuntimeDxe/EmuVariableRuntimeDxe.inf
+
+  # Fake Variable Services
   MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
+
+  # Debug heartbeat
+  Lumia830Pkg/Driver/HeartbeatDxe/HeartbeatDxe.inf
+
 
   # Security Stub
   MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe.inf
