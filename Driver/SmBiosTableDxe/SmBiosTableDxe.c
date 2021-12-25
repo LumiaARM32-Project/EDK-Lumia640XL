@@ -90,7 +90,7 @@ SMBIOS_TABLE_TYPE0 mBIOSInfoType0 = {
     0,    //  Floppy35_288IsSupported           :1;
     0,    //  PrintScreenIsSupported            :1;
     0,    //  Keyboard8042IsSupported           :1;
-    0,    //  SerialIsSupported                 :1;
+    1,    //  SerialIsSupported                 :1;
     0,    //  PrinterIsSupported                :1;
     0,    //  CgaMonoIsSupported                :1;
     0,    //  NecPc98                           :1;
@@ -143,10 +143,10 @@ SMBIOS_TABLE_TYPE1 mSysInfoType1 = {
 };
 CHAR8  *mSysInfoType1Strings[] = {
   "Nokia",
-  "Lumia 830",
-  "RM-984",
+  "Lumia 640XL",
+  "RM1096",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
-  "RM-984",
+  "RM1096",
   "Phone",
   NULL
 };
@@ -177,8 +177,8 @@ SMBIOS_TABLE_TYPE2  mBoardInfoType2 = {
 };
 CHAR8  *mBoardInfoType2Strings[] = {
   "Nokia",
-  "Lumia 830",
-  "RM-984",
+  "Lumia 640XL",
+  "RM1096",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "",
   "",
@@ -299,8 +299,8 @@ SMBIOS_TABLE_TYPE4 mProcessorInfoType4 = {
 CHAR8 *mProcessorInfoType4Strings[] = {
   "Socket",
   "Qualcomm Inc.",
-  "Qualcomm Snapdragon 800 Processor (8926)",
-  "MSM8926",
+  "Qualcomm Snapdragon 400 Processor (8226)",
+  "MSM8226",
   NULL
 };
 
