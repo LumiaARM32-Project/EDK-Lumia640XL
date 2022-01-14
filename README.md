@@ -1,7 +1,7 @@
 #  EDK-Lumia640XLPkg
 -用于Lumia640XL的WIP定制ARM UEFI固件
--基于rickliu的Lumia930Pkg：https：//github.com/rickliu2000/Lumia930Pkg
--原自Dominduchami的Lumia830Pkg：https：//github.com/Dominduchami/Lumia830Pkg
+-基于rickliu的Lumia930Pkg:https://github.com/rickliu2000/Lumia930Pkg
+-原自Dominduchami的Lumia830Pkg:https//github.com/Dominduchami/Lumia830Pkg
 
 ##进行
 -测试Linux并继续更新，但是wifi目前可能支持
@@ -20,8 +20,8 @@
 ##  Linux
 -注：需要在UEFI shell用zImage或启动GRUB，目前已经可以启动
 -需要一个设备树（dtb）与内核。
--Lumia930：https：//github.com/rickliu2000/linux_nokia_msm8974 （只适用于930，部分工作）
--Lumia830：https：//github.com/Mainline4Lumia/linux/tree/msm8x26 （UART，EMMC，触屏工作内核）
+-Lumia930：https://github.com/rickliu2000/linux_nokia_msm8974(只适用于930，部分工作)
+-Lumia830：https://github.com/Mainline4Lumia/linux/tree/msm8x26(UART，EMMC，触屏工作内核)
 
 ##问题
 -在UEFI设置中，选择会一直向上，无法选择选项
