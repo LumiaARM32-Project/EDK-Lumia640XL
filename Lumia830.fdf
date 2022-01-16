@@ -38,7 +38,14 @@ READ_LOCK_STATUS   = TRUE
     # next, install cpu protocol and enable the interrupt controller
     INF ArmPkg/Drivers/CpuDxe/CpuDxe.inf
     INF ArmPkg/Drivers/ArmGic/ArmGicDxe.inf
-  }
+
+   FILE DRIVER = 5bd181db-0487-4f1a-ae73-820e165611b3 {
+    SECTION DXE_DEPEX = Lumia830Pkg/Binary/ButtonsDxe/ButtonsDxe.depex
+    SECTION PE32 = Lumia830Pkg/Binary/ButtonsDxe/ButtonsDxe.efi
+    SECTION UI = "ButtonsDxe"
+    }
+
+}
 
   # Architecture services (PI Stage)
   INF MdeModulePkg/Core/Dxe/DxeMain.inf
@@ -52,6 +59,37 @@ READ_LOCK_STATUS   = TRUE
   INF EmbeddedPkg/MetronomeDxe/MetronomeDxe.inf
   INF EmbeddedPkg/ResetRuntimeDxe/ResetRuntimeDxe.inf
   INF EmbeddedPkg/RealTimeClockRuntimeDxe/RealTimeClockRuntimeDxe.inf
+
+  FILE DRIVER = af9763a2-033b-4109-8e17-56a98d380c92 {
+    SECTION DXE_DEPEX = Lumia830Pkg/Binary/HWIODxeDriver/HWIODxeDriver.depex
+    SECTION PE32 = Lumia830Pkg/Binary/HWIODxeDriver/HWIODxeDriver.efi
+    SECTION UI = "HWIODxeDriver"
+  }
+
+  FILE DRIVER = 5bd181db-0487-4f1a-ae73-820e165611b3 {
+    SECTION DXE_DEPEX = Lumia830Pkg/Binary/ButtonsDxe/ButtonsDxe.depex
+    SECTION PE32 = Lumia830Pkg/Binary/ButtonsDxe/ButtonsDxe.efi
+    SECTION UI = "ButtonsDxe"
+  }
+
+  FILE DRIVER = 1eb2c89e-ce1c-4d35-a9b7-1dc2f3705101 {
+    SECTION DXE_DEPEX = Lumia830Pkg/Binary/PmicDxe/PmicDxe.depex
+    SECTION PE32 = Lumia830Pkg/Binary/PmicDxe/PmicDxe.efi
+    SECTION UI = "PmicDxe"
+  }
+
+    FILE DRIVER = 04de8591-d2b3-4077-bbbe-b12070094eb6 {
+    SECTION DXE_DEPEX = Lumia830Pkg/Binary/I2C/I2C.depex
+    SECTION PE32 = Lumia830Pkg/Binary/I2C/I2C.efi
+    SECTION UI = "I2C"
+    }
+
+
+    FILE DRIVER = 7a32bd23-f735-4f57-aa1a-447d2fe3be0d {
+    SECTION DXE_DEPEX = Lumia830Pkg/Binary/SPI/SPI.depex
+    SECTION PE32 = Lumia830Pkg/Binary/SPI/SPI.efi
+    SECTION UI = "SPI"
+    }
 
   # SoC Drivers (Cross-referenced from EFIDroid and Ben)
   INF Lumia830Pkg/Driver/BamDxe/BamDxe.inf
@@ -67,7 +105,6 @@ READ_LOCK_STATUS   = TRUE
   INF Lumia830Pkg/Driver/SmdRpmDxe/RpmDxe.inf
 
   INF Lumia830Pkg/Driver/SmemPtableDxe/SmemPtableDxe.inf
-  INF Lumia830Pkg/Driver/HeartbeatDxe/HeartbeatDxe.inf
 
   # Runtime Services
   INF MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
@@ -83,6 +120,7 @@ READ_LOCK_STATUS   = TRUE
   INF Lumia830Pkg/Driver/SimpleFbDxe/SimpleFbDxe.inf
 
   # BDS
+  INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
   INF MdeModulePkg/Universal/PrintDxe/PrintDxe.inf
   INF MdeModulePkg/Universal/Console/ConPlatformDxe/ConPlatformDxe.inf
   INF MdeModulePkg/Universal/Console/ConSplitterDxe/ConSplitterDxe.inf
@@ -93,7 +131,6 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/DisplayEngineDxe/DisplayEngineDxe.inf
   INF MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe.inf
   INF MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
-  INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
   INF MdeModulePkg/Application/UiApp/UiApp.inf
   INF Lumia830Pkg/Driver/LogoDxe/LogoDxe.inf
 
