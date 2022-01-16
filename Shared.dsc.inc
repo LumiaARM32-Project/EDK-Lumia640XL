@@ -400,10 +400,6 @@
   # Fake Variable Services
   MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
 
-  # Debug heartbeat
-  Lumia830Pkg/Driver/HeartbeatDxe/HeartbeatDxe.inf
-
-
   # Security Stub
   MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe.inf
 

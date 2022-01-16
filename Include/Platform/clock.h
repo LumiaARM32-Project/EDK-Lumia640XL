@@ -26,11 +26,11 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef __MSM8926_CLOCK_H
-#define __MSM8926_CLOCK_H
+#ifndef __MSM8226_CLOCK_H
+#define __MSM8226_CLOCK_H
 
-#include <Chipset/clock.h>
-#include <Chipset/clock_lib2.h>
+#include <clock.h>
+#include <clock_lib2.h>
 
 #define UART_DM_CLK_RX_TX_BIT_RATE 0xCC
 
