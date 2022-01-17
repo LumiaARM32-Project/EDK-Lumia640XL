@@ -4,9 +4,7 @@
 - 原自Dominduchami的Lumia830Pkg:https//github.com/Dominduchami/Lumia830Pkg
 
 ## 进行
-- 测试Linux并继续更新，但是wifi目前可能支持
-- ACPI还需修复
-- 修复Linux中无线
+- 修复更多
 
 ## EDK-UEFI支持状态
 - EMMC MMU PMIC GPIO工作
@@ -25,7 +23,7 @@
 
 ## 问题
 - 在UEFI设置中，选择会一直向上，无法选择选项
-- 无法启动Windows （错误转换页面：Feiled to find range 10000000-10115FFF）
+- 可以引导bootarm.efi(在uefi shell),但加载Windows没有微标，一直黑屏（我认为启动Windows没有意义，除非windows lot）
 
 ## 如何使用
 - 编译:略
