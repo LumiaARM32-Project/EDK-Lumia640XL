@@ -4,13 +4,14 @@
 - 原自Dominduchami的Lumia830Pkg:https//github.com/Dominduchami/Lumia830Pkg
 
 ## 进行
-- 修复更多
+- 无
 
 ## EDK-UEFI支持状态
 - EMMC MMU PMIC GPIO工作
 - 部分ACPI（从WP中复制，目前未验证是否工作）
 - 已有GRUB支持
 - 可以启动Linux-arm
+- 可以引导bootarm.efi(windows启动管理器)
 
 ## Linux中支持状态
 - EMMC 触屏--工作
@@ -18,8 +19,8 @@
 ##  Linux
 - 注：需要在UEFI shell用zImage或启动GRUB，目前已经可以启动
 - 需要一个设备树（dtb）与内核。
-- Lumia930：https://github.com/rickliu2000/linux_nokia_msm8974(只适用于930，部分工作)
-- Lumia830：https://github.com/Mainline4Lumia/linux/tree/msm8x26(UART，EMMC，触屏工作内核)
+- Lumia930：https://github.com/rickliu2000/linux_nokia_msm8974 (只适用于930，部分工作)
+- Lumia830：https://github.com/Mainline4Lumia/linux/tree/msm8x26 (UART，EMMC，触屏工作内核)
 
 ## 问题
 - 在UEFI设置中，选择会一直向上，无法选择选项
