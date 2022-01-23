@@ -3,6 +3,9 @@
 - 基于rickliu的Lumia930Pkg:https://github.com/rickliu2000/Lumia930Pkg
 - 原自Dominduchami的Lumia830Pkg:https//github.com/Dominduchami/Lumia830Pkg
 
+## 
+- 目前Linux的网络不能支持，也许将会停止进行
+
 ## 进行
 - 无
 
