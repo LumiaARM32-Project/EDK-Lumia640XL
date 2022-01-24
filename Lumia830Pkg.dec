@@ -133,4 +133,4 @@
   gQcomTokenSpaceGuid.PcdMmcHs200Caps|FALSE|BOOLEAN|0x00010010
 
    # RPM
-  gQcomTokenSpaceGuid.PcdInstallRpmProtocol|FALSE|BOOLEAN|0x00000c100 
+  gQcomTokenSpaceGuid.PcdInstallRpmProtocol|FALSE|BOOLEAN|0x00000c100
