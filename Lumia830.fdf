@@ -148,19 +148,19 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/Acpi/AcpiPlatformDxe/AcpiPlatformDxe.inf
   INF MdeModulePkg/Universal/Acpi/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf
 
-    FILE FREEFORM = 7E374E25-8E01-4FEE-87F2-390C23C606CD {
-    SECTION RAW = Lumia830Pkg/AcpiTables/aml/bgrt.acp
-    SECTION RAW = Lumia830Pkg/AcpiTables/aml/csrt.acp
-    SECTION RAW = Lumia830Pkg/AcpiTables/aml/dbg2.acp
-    SECTION RAW = Lumia830Pkg/AcpiTables/aml/dsdt.aml
-    SECTION RAW = Lumia830Pkg/AcpiTables/aml/facp.acp
-    SECTION RAW = Lumia830Pkg/AcpiTables/aml/facs.acp
-    SECTION RAW = Lumia830Pkg/AcpiTables/aml/gtdt.acp
-    SECTION RAW = Lumia830Pkg/AcpiTables/aml/madt.acp
-    SECTION RAW = Lumia830Pkg/AcpiTables/aml/ssdt.aml
-    SECTION RAW = Lumia830Pkg/AcpiTables/aml/TPM2.acp
-	SECTION UI = "AcpiTables"
-  }
+#    FILE FREEFORM = 7E374E25-8E01-4FEE-87F2-390C23C606CD {
+#    SECTION RAW = Lumia830Pkg/AcpiTables/aml/bgrt.acp
+#    SECTION RAW = Lumia830Pkg/AcpiTables/aml/csrt.acp
+#    SECTION RAW = Lumia830Pkg/AcpiTables/aml/dbg2.acp
+#   SECTION RAW = Lumia830Pkg/AcpiTables/aml/dsdt.aml
+#    SECTION RAW = Lumia830Pkg/AcpiTables/aml/facp.acp
+#    SECTION RAW = Lumia830Pkg/AcpiTables/aml/facs.acp
+#    SECTION RAW = Lumia830Pkg/AcpiTables/aml/gtdt.acp
+#    SECTION RAW = Lumia830Pkg/AcpiTables/aml/madt.acp
+#    SECTION RAW = Lumia830Pkg/AcpiTables/aml/ssdt.aml
+#    SECTION RAW = Lumia830Pkg/AcpiTables/aml/TPM2.acp
+#	SECTION UI = "AcpiTables"
+#  }
 
   #ACPI and SMBIOS
   INF Lumia830Pkg/Driver/SmBiosTableDxe/SmBiosTableDxe.inf

@@ -207,7 +207,7 @@ SMBIOS_TABLE_TYPE3  mEnclosureInfoType3 = {
   { { 0 } },    // ContainedElements[1];
 };
 CHAR8  *mEnclosureInfoType3Strings[] = {
-  "Lumia 830",
+  "Lumia 640",
   "1",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "",

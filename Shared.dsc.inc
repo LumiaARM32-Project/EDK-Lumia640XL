@@ -56,7 +56,7 @@
   gEfiMdePkgTokenSpaceGuid.PcdPostCodePropertyMask|0
   gEfiMdePkgTokenSpaceGuid.PcdUefiLibMaxPrintBufferSize|320
   gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask|0x2f
-  gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel|0x800fee0f
+  gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel|0x80000040
   gEfiMdePkgTokenSpaceGuid.PcdReportStatusCodePropertyMask|0x07
   gEmbeddedTokenSpaceGuid.PcdMemoryTypeEfiACPIReclaimMemory|0
   gEmbeddedTokenSpaceGuid.PcdMemoryTypeEfiACPIMemoryNVS|0
